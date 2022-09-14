@@ -1,0 +1,2 @@
+HTML - marcação de texto
+é o esqueleto da página

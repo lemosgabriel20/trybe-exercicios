@@ -1,0 +1,45 @@
+Abrir armário
+Visualizar a parte onde estão as camisetas
+Escolher a camiseta preferida
+Retirar a camiseta do armário
+Colocar a camiseta na cama
+Voltar ao armário
+Visualizar a parte onde estão as calças
+Escolher a calça preferida
+Retirar a calça do armário
+Colocar a calça na cama
+Abrir a gaveta de meias
+Escolher uma meia preta
+Colocar a meia na cama
+Ir á sapateira
+Escolher calçado mais conveniente para a festa
+
+Se caso a sapateira for longe da cama:
+	Levar o sapato no chão 20 cm longe do pé da cama
+
+Se não:
+	Deixar no chão 10 cm longe do pé da sapateira
+Voltar a cama
+
+Se estiver vestindo roupa de cima:
+	Retirar a roupa de cima que estiver vestindo
+Colocar a camiseta que está na cama
+
+Se estiver vestindo cueca:
+	Se estiver vestindo roupa de baixo que não é cueca:
+		Retirar roupa de baixo
+Se não:
+	Ir as gavetas
+	Pegar cueca
+	Se não estiver vestindo roupa de baixo:
+		Vestir cueca
+Colocar a calça que está na cama
+Se estiver de meia:
+	Retirar meia
+Se não:
+	Colocar meia que está na cama
+
+Colocar sapato que está a 20 cm longe do pé da cama OU 10cm longe do pé da sapateira.
+
+
+BABY STEPS!!!

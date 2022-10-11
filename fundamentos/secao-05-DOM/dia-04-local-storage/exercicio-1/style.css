@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+#input-container, #content-container{
+    width: 100%;
+}
+
+#input-container {
+    background-color: white;
+    height: 35px;
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+}
+
+#input {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+#content {
+    margin: auto;
+    text-align: justify;
+    width: 49%;
+}
+
+.spaces {
+    margin-left: 10%;
+}
+
+.options {
+    display: inline-block;
+    margin: 0 25px 0 25px;
+}

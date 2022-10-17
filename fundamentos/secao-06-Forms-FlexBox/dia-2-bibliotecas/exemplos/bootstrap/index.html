@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="datepickerx-dist/css/DatePickerX.min.css">
+    <script src="datepickerx-dist/js/DatePickerX.min.js"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+        .borderset{
+            border: 4px solid black;
+            padding: 15px;
+        }
+        
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="display-4 text-muted">TrybeTrip</h1>
+    <form action="" method="get" id="form" enctype="multipart/form-data">
+        <fieldset id="main-fieldset" class="borderset">
+            <div class="mb-3">
+                <label for="input-name">Nome:</label>
+                <input required class="form-control" type="text" name="nome" id="input-name">
+            </div>
+
+            <div class="mb-3">
+                <label for="input-email">Email:</label>
+                <input required class="form-control" type="text" name="email" id="input-email">
+             </div>
+
+            <fieldset>
+                <legend>Destino preferido:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" required type="radio" name="locais" value="cidade" id="cidade">
+                    <label for="cidade">Cidade</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="locais" value="campo" id="campo">
+                    <label for="campo">Campo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="locais" value="praia" id="praia">
+                    <label for="praia">Praia</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="locais" value="montanhas" id="montanhas">
+                    <label for="montanhas">Montanhas</label>
+                </div>
+            </fieldset>
+
+            <div class="mb-3">
+                <label for="input-answer">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+                <br>
+                <textarea class="form-control" required name="answer" id="input-answer" maxlength="500"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label  for="input-date">Qual a melhor data para realizar sua viagem?</label>
+                <input class="form-control" required type="text" name="date" id="input-date" placeholder="Data de sua viagem">
+            </div>
+
+            <fieldset>
+                <label for="offer-agree">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                <input class="form-check-input" type="checkbox" name="agree" value="offer-agree" id="offer-agree">
+
+                <br>
+
+                <label for="image-agree">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                <input class="form-check-input" type="checkbox" name="agree" value="image-agree" id="image-agree">
+            </fieldset>
+            <div class="mb-3">
+                <label for="pictures">Envie suas fotos:</label>
+                <input class="form-control" disabled type="file" name="pictures" id="pictures" multiple>
+            </div>
+        </fieldset>
+        <div class="mb-3">
+            <input class="btn btn-success" type="submit" id="submit-button" value="Enviar">
+            <input class="btn btn-danger" type="reset" id="reset-button" value="Apagar">
+        </div>
+    </form>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script>
+        const validate = new window.JustValidate('#form');
+        validate.addField('#input-name', [
+                    {
+                    rule: 'minLength',
+                    value: 10,
+                    },
+                    {
+                    rule: 'maxLength',
+                    value: 40,
+                    },
+                ])
+                .addField('#input-email', [
+                    {
+                    rule: 'required',
+                    errorMessage: 'Email is required',
+                    },
+                    {
+                    rule: 'email',
+                    errorMessage: 'Email is invalid!',
+                    },
+                    {
+                    rule: 'minLength',
+                    value: 10,
+                    },
+                    {
+                    rule: 'maxLength',
+                    value: 50,
+                    }     
+                ]);
+    </script>
+ </body>
+</html>
